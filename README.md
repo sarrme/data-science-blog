@@ -1,5 +1,5 @@
 ## Abstract
-I created a blog for sharing knowledge about data science, new papers in the subjects and explanation about the basics of statistics. 
+I created a blog for sharing knowledge about data science, new papers in the subject and explanation about the basics of statistics. 
 
 ### Source of the template 
  [Start Bootstrap - Clean Blog](https://startbootstrap.com/template-overviews/clean-blog/)
