@@ -61,10 +61,10 @@
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="post-heading">
-            <h1>Exploring linear models to the fullest</h1>
-            <h2 class="subheading">Have you ever wondered about how you could </h2>
+            <h1>Basics Part 1</h1>
+            <h2 class="subheading">Probability</h2>
             <span class="meta">Posted by
-              <a href="#">Start Bootstrap</a>
+              SARROUKH Issame
               on August 24, 2019</span>
           </div>
         </div>
@@ -77,45 +77,32 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
-          <p>Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airman's earth, if free men make it, will be truly round: a globe in practice, not in theory.</p>
+            <p>
+            What is a probability? 
+            </p>
 
-          <p>Science cuts two ways, of course; its products can be used for both good and evil. But there's no turning back from science. The early warnings about technological dangers also come from science.</p>
 
-          <p>What was most significant about the lunar voyage was not that man set foot on the Moon but that they set eye on the earth.</p>
-
-          <p>A Chinese tale tells of some men sent to harm a young girl who, upon seeing her beauty, become her protectors rather than her violators. That's how I felt seeing the Earth for the first time. I could not help but love and cherish her.</p>
-
-          <p>For those who have seen the Earth from space, and for the hundreds and perhaps thousands more who will, the experience most certainly changes your perspective. The things that we share in our world are far more valuable than those which divide us.</p>
-
-          <h2 class="section-heading">The Final Frontier</h2>
-
-          <p>There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.</p>
-
-          <p>There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.</p>
-
-          <blockquote class="blockquote">The dreams of yesterday are the hopes of today and the reality of tomorrow. Science has not yet mastered prophecy. We predict too much for the next year and yet far too little for the next ten.</blockquote>
-
-          <p>Spaceflights cannot be stopped. This is not the work of any one man or even a group of men. It is a historical process which mankind is carrying out in accordance with the natural laws of human development.</p>
-
-          <h2 class="section-heading">Reaching for the Stars</h2>
-
-          <p>As we got further and further away, it [the Earth] diminished in size. Finally it shrank to the size of a marble, the most beautiful you can imagine. That beautiful, warm, living object looked so fragile, so delicate, that if you touched it with a finger it would crumble and fall apart. Seeing this has to change a man.</p>
-
-          <a href="#">
-            <img class="img-fluid" src="img/post-sample-image.jpg" alt="">
+            <p>
+            I've always wondered about this question, a probability, could I make sense of it. Before discussing any machine learning algorithm, it is important to fully understand the vocabulary associated with the concept of probability. 
+            </p> 
+            <p>
+            Let's understand what probability is. Probability is a way to quantify the likelihood of an event occurring, it is something we do in our daily lives. For example, when you talk to someone about the weather, you'll probably tell them "it's probably going to rain today, isn't it" if the day is cloudy. Probability quantifies this perception by associating a number between 0 and 1 with the certainty that the event will happen, with probability 1, the event is certain, 0 is impossible.  The space we are working in, includes all possible events, for example the fact that it rains or it doesn't rain are two events that encompass all possible events, the set {1, 2, 3, 4, 5, 6} describes all possible values of rolling a die, the event of flipping a coin could give only two possible values: a head or a tail, and for the latter the event of rolling an unbiased coin (not favoring one side over the other) will give a head with a probability of 0.5 and a tail with the same probability, these are only the two possible outcomes and they have equal probability. </p>
+            <p>
+            Mathematically, we refer to the event space as \(\Omega\). The probability of all events occurring is 1, which corresponds to the equation \(P(\Omega)=1\). If we denote a specific event by \(A\), then the complementary event is written \(\overline{A}\). With probability, we express our perception in the form of a mathematical formula. For example, if we take two events \(A\) and \(B\) that cannot occur at the same time, it is logical that the event that is described as the two events (we write this event as an intersection (\(A \cap B\)) occurring is 0, which is expressed as \(P(A \cup B) = 0\), the event that \(A\) occurs or \(B\) occurs is a sum of the two probabilities, either will occur, it makes sense to write the probability as a sum, \(P(A \cup B)=P(A) + P(B)\). The intersection of two events is not always 0, for example, suppose we roll two dice one after the other, we designate \(A\) as the event, we get 1 in the first die, B as the event we get 1 in the second die, the intersection is quite obvious in this case, we get 1 when we roll the first die and 1 in the second. The probability is not 0, because the event can occur without any doubt. The event that the first event occurs or the second event occurs is expressed in another way, we will not go into details but we give the formula, \(P(A \cup B) = P(A) + P(B) - P(A \cap B)\). 
+            <a href="#">
+            <img class="img-fluid" src="img/AandB.png" alt="">
           </a>
-          <span class="caption text-muted">To go places and do things that have never been done before – that’s what living is all about.</span>
+          <span class="caption text-muted">Intersection illustration.</span>
+          
 
-          <p>Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds, to seek out new life and new civilizations, to boldly go where no man has gone before.</p>
+            <p>
+            We initially said that it is more likely to rain if the sky is cloudy, this is called the conditional probability. The probability that it will rain is conditioned by the fact that the sky is cloudy, you assume that the sky is cloudy as a fact and you look for the probability of the weather. The conditional probability can be expressed mathematically as : 
+            \(P(A|B) = \frac{P(A \cap B)}{P(A)}\) 
+            </p>
 
-          <p>As I stand out here in the wonders of the unknown at Hadley, I sort of realize there’s a fundamental truth to our nature, Man must explore, and this is exploration at its greatest.</p>
-          <p>
-  When \(a \ne 0\), there are two solutions to \(ax^2 + bx + c = 0\) and they are
-  \[x = {-b \pm \sqrt{b^2-4ac} \over 2a}.\]
-</p>
-          <p>Placeholder text by
-            <a href="http://spaceipsum.com/">Space Ipsum</a>. Photographs by
-            <a href="https://www.flickr.com/photos/nasacommons/">NASA on The Commons</a>.</p>
+
+
+
         </div>
       </div>
     </div>
@@ -139,7 +126,7 @@
               </a>
             </li>
           </ul>
-          <p class="copyright text-muted">Copyright &copy; Your Website 2019</p>
+          <p class="copyright text-muted">Data Science Blog</p> 
         </div>
       </div>
     </div>
